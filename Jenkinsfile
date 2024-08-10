@@ -8,11 +8,10 @@ pipeline {
     }
     stage('Docker Push') {
       steps {
-        withCredentials([usernamePassword(credentialsId: 'xx', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
-          sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
+        withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'dockerPassword', usernameVariable: 'dockerUser')]) {
+          sh "docker login -u ${env.dockerUser} -p ${env.dockerPassword}"
           sh 'docker push apasoft/jenkins-web:latest'
         }
       }
-    }
   }
 }

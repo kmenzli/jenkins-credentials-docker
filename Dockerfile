@@ -6,7 +6,7 @@ RUN apt-get update
 ##Instalamos nginx 
 RUN apt-get install -y nginx 
 ##Creamos un fichero index.html en el directorio por defecto de nginx 
-RUN echo 'Mi primer Dockerfile' > /var/www/html/index.html 
+RUN echo '<h1>Mi primer Dockerfile</h1>' > /var/www/html/index.html 
 ##Arrancamos NGINX a través de ENTRYPOINT para que no pueda ser ##modificar en la creación del contenedor 
 ENTRYPOINT ["/usr/sbin/nginx", "-g", "daemon off;"] 
 ##Exponemos el Puerto 80 
