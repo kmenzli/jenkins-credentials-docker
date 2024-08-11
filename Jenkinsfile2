@@ -3,12 +3,12 @@ pipeline {
   parameters {
      credentials credentialType: 'com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl', 
      defaultValue: '', 
-     description: 'This is an example', 
+     description: 'Docker credentials', 
      name: 'DOCKER_PARAM', 
      required: true
-   }
-   environment{
-    DOCKER=credentials("${params.DOCKER_PARAM}")
+  }
+  environment{
+    DOCKER=credentials("${DOCKER_PARAM}")
     //DOCKER  USU:PASS
     //DOCKER_USR   USER
     //DOCKER_PSW    PASSSWORD
