@@ -1,1 +1,21 @@
+
+pipeline {
+  agent any
+  stages {
+stage('Checkout'){
+steps {
 git branch: 'main', credentialsId: 'ssh-github-connect', url: 'https://github.com/kmenzli/jenkins-credentials-docker.git'
+}
+}
+    stage('Docker Build') {
+      steps {
+        echo 'Do something'
+      }
+    }
+    stage('Docker Push') {
+      steps {
+         sh 'echo "salu"'
+        }
+      }
+    }
+}
