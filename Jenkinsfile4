@@ -1,0 +1,1 @@
+git branch: 'main', credentialsId: 'ssh-github-connect', url: 'https://github.com/kmenzli/jenkins-credentials-docker.git'
