@@ -1,0 +1,16 @@
+pipeline {
+  agent any
+  stages {
+    stage('Docker Build') {
+      steps {
+        echo 'Do something'
+      }
+    }
+    stage('Docker Push') {
+      steps {
+         sh 'echo "salu"'
+        }
+      }
+    }
+  }
+}
