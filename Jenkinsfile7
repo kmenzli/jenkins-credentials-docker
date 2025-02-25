@@ -7,6 +7,11 @@ pipeline {
     //DOCKER_PSW    PASSSWORD
   }
   stages {
+    stage('Docker Preprequise') {
+      steps {
+        echo "Bonjouuuuur !!!"
+      }
+    }
     stage('Docker Build') {
       steps {
         sh 'docker build -t kmenzli/jenkins-web:latest .'
