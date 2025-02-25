@@ -1,1 +1,20 @@
 
+pipeline {
+  agent any
+  environment{
+    DOCKER=credentials('credential-user-password')
+    //DOCKER  USU:PASS
+    //DOCKER_USR   USER
+    //DOCKER_PSW    PASSSWORD
+    blabla=credentials('credential-user-password')
+  }
+  stages {
+    stage('Docker Build') {
+      steps {
+        echo "User Name ${env.DOCKER_USR}"
+        echo "Pasword Name ${env.DOCKER_PSW}"
+        echo "BlaBla ${env.blabla}"
+      }
+    }
+  }
+}
