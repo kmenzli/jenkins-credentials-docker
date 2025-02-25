@@ -10,6 +10,7 @@ pipeline {
     stage('Docker Preprequise') {
       steps {
         echo "Bonjouuuuur !!!"
+        sh 'docker info'
       }
     }
     stage('Docker Build') {
