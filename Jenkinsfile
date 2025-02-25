@@ -1,6 +1,16 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'node:18.16.0-alpine'
+      label 'docker'
+    }
+  }
   stages {
+     stage('Docker check') {
+      steps {
+        sh 'node --version'
+      }
+    }
     stage('Docker Build') {
       steps {
         sh 'docker build -t kmenzli/jenkins-web:latest .'
