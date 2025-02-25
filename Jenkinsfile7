@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment{
-    DOCKER=credentials("${DOCKER_PARAM}")
+    DOCKER=credentials("DOCKER_PARAM")
     //DOCKER  USU:PASS
     //DOCKER_USR   USER
     //DOCKER_PSW    PASSSWORD
