@@ -12,7 +12,7 @@ pipeline {
       steps {
         echo "User Name ${env.DOCKER_USR}"
         echo "Pasword Name ${env.DOCKER_PSW}"
-        echo "Pasword Name ${env.blabla}"
+        echo "BlaBla ${env.blabla}"
       }
     }
   }
