@@ -9,8 +9,8 @@ pipeline {
   stages {
     stage('Docker Build') {
       steps {
-        echo "User Name "${env.DOCKER_USR}"
-        echo "Pasword Name "${env.DOCKER_PSW}"
+        echo "User Name ${env.DOCKER_USR}"
+        echo "Pasword Name ${env.DOCKER_PSW}"
       }
     }
   }
